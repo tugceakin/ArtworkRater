@@ -37,22 +37,12 @@ class Login extends CI_Controller{
             $result = $this->model_login->login_user();
             switch($result){
                 case 'logged_in':
-
                     redirect('site');
                 case 'incorrect_password':
-                    /* $this->load->model("model_database");
-                     $data['categories'] = $this->model_database->get_categories();
-                     */
                     redirect('login');
                 case 'not_activated':
-                    /* $this->load->model("model_database");
-                    $data['categories'] = $this->model_database->get_categories();
-                    */
                     redirect('login');
                 case 'email_not_found':
-                    /* $this->load->model("model_database");
-                    $data['categories'] = $this->model_database->get_categories();
-                    */
                     redirect('login');
                     break;
             }
