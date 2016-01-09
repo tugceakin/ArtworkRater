@@ -12,19 +12,10 @@ class Login extends CI_Controller{
     public function __construct(){
         parent::__construct();
         $this->load->model('model_login');
-//        if($this->session->userdata('logged_in')){
-//            $this->logged_in = true;
-//        }else{
-//            $this->logged_in = false;
-//        }
     }
 
     function index(){
 
-//        $this->load->model("model_database");
-//        $data['categories'] = $this->model_database->get_categories();
-//        $data['logged_in'] = $this->logged_in;
-//        $data['user_type'] = $this->session->userdata('user_type');
         $this->load->view('includes/header');
         $this->load->view('login/view_login');
         $this->load->view('includes/footer');
